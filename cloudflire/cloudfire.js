@@ -7,7 +7,7 @@ const cloudflareImage = () => {
     const saveImage = async (formData) => {
         try {
 
-            await axios.post(
+            const response = await axios.post(
             "https://api.cloudflare.com/client/v4/accounts/ca9b43f77ee269734e8818fd05c17671/images/v1",
             formData,{
                 headers: {
