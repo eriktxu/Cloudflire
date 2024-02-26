@@ -16,6 +16,11 @@ const cloudflareImage = () => {
                 },
             });
 
+            const { result } = response.data;
+            if (result && result.variants) {
+                setVariants(result.variants);
+            }
+
         } catch (error) {
             console.error("ERROR! al subir la imagen:", error);
         }
